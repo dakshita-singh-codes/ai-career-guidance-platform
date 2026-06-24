@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import UploadBox from "./components/UploadBox";
 // import SkillList from "./components/SkillList";
 import Navbar from "./components/Navbar";
+import UserList from "./components/UserList";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
     <Header title="AI Career Guidance Platform"/>
 
     <UploadBox/>
+    <UserList />
     {/* <SkillList/> */}
   </div>
 </>
