@@ -1,12 +1,12 @@
 import "./UploadBox.css";
 import { useEffect, useState } from "react";
-
+import "./SkillList.css";
 function UploadBox() {
 
   const [uploaded, setUploaded] = useState(false);
   const [name, setName] = useState("");
   const [resume, setResume] = useState<File | null>(null);
-  
+  const [loading, setLoading] = useState(false);
   const skills = [
   "React",
   "Node.js",
@@ -21,15 +21,26 @@ useEffect(() => {
     console.log("Name changed:", name);
 }, [name]);
 
-  function handleClick() {
-    if(resume){
-        setUploaded(true);
-    }
-    else{
-      alert("Select a resume first!")
-    }
-  
+function handleClick() {
+
+  if(resume){
+
+    setLoading(true);
+
+    setTimeout(() => {
+
+      setUploaded(true);
+      setLoading(false);
+
+    }, 2000);
+
   }
+
+  else{
+    alert("Select a resume first!");
+  }
+
+}
 
  return (
   <div className="upload-box">
@@ -60,11 +71,20 @@ Selected File: {resume.name}
 }
 <br /><br />
     <button
-      className="upload-btn"
-      onClick={handleClick}
-    >
-      Upload Resume
-    </button>
+className="upload-btn"
+onClick={handleClick}
+disabled={loading}
+>
+
+{
+loading
+?
+"Uploading..."
+:
+"Upload Resume"
+}
+
+</button>
 
   {uploaded && (
   <div className="success">
@@ -79,13 +99,17 @@ Selected File: {resume.name}
 
     <h3>Skills Found</h3>
 
-    {
-      skills.map((skill) => (
-        <p key={skill}>
-          ✔ {skill}
-        </p>
-      ))
-    }
+ <div className="skills-container">
+
+{
+skills.map((skill)=>(
+<div className="skill-card" key={skill}>
+{skill}
+</div>
+))
+}
+
+</div>
 
   </div>
 )}

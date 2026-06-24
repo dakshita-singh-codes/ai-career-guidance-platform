@@ -1,3 +1,4 @@
+import "./SkillList.css";
 function SkillList() {
 
     const skills = [
@@ -10,12 +11,12 @@ function SkillList() {
     return (
         <div>
             <h2>Skills</h2>
-
+<div className="skills-container"></div>
             {
                 skills.map((skill) => (
-                    <p key={skill}>
-                        ✔ {skill}
-                    </p>
+                    <div className="skill-card" key={skill}>
+  {skill}
+</div>
                 ))
             }
 

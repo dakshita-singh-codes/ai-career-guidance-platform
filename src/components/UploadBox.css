@@ -29,3 +29,8 @@
     font-weight:bold;
     margin-top:20px;
 }
+
+.upload-btn:disabled{
+    background-color:gray;
+    cursor:not-allowed;
+}
