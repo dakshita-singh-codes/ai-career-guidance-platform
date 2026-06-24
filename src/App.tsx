@@ -1,31 +1,31 @@
-import Header from "./components/Header";
-import UploadBox from "./components/UploadBox";
-// import SkillList from "./components/SkillList";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
-import UserList from "./components/UserList";
+
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
-<>
-  <Navbar />
+    <BrowserRouter>
 
-  <div
-    style={{
-      display:"flex",
-      flexDirection:"column",
-      justifyContent:"center",
-      alignItems:"center",
-      minHeight:"80vh"
-    }}
-  >
+      <Navbar />
 
-    <Header title="AI Career Guidance Platform"/>
+      <Routes>
 
-    <UploadBox/>
-    <UserList />
-    {/* <SkillList/> */}
-  </div>
-</>
+        <Route path="/" element={<Home />} />
+
+        <Route path="/dashboard" element={<Dashboard />} />
+
+        <Route path="/about" element={<About />} />
+
+        <Route path="/contact" element={<Contact />} />
+
+      </Routes>
+
+    </BrowserRouter>
   );
 }
 

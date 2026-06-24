@@ -26,3 +26,12 @@ li{
 li:hover{
     color:#dbeafe;
 }
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+a:hover{
+    color:#dbeafe;
+}
