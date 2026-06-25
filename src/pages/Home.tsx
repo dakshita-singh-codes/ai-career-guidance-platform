@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import Hero from "../components/Hero";
 import UploadBox from "../components/UploadBox";
 // import UserList from "../components/UserList";
 import CareerForm from "../components/CareerForm"
@@ -16,7 +16,7 @@ function Home() {
             }}
         >
 
-            <Header title="AI Career Guidance Platform" />
+            <Hero />
 
             <UploadBox />
 
