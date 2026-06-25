@@ -1,6 +1,8 @@
 import Header from "../components/Header";
 import UploadBox from "../components/UploadBox";
-import UserList from "../components/UserList";
+// import UserList from "../components/UserList";
+import CareerForm from "../components/CareerForm"
+import Features from "../components/Features";
 
 function Home() {
     return (
@@ -18,7 +20,9 @@ function Home() {
 
             <UploadBox />
 
-            <UserList />
+            {/* <UserList /> */}
+            <CareerForm />
+            <Features />
 
         </div>
     );

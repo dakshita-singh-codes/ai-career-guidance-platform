@@ -1,0 +1,57 @@
+.career-form{ 
+    width:100%;
+max-width:500px; 
+    margin:40px auto; 
+    padding:30px; 
+    background:white; border-radius:15px; 
+    box-shadow:0 10px 25px rgba(0,0,0,0.1); 
+    display:flex; flex-direction:column; gap:15px; 
+} 
+.career-form input, 
+.career-form select, 
+.career-form textarea
+{ 
+    padding:12px; 
+    border-radius:8px; 
+    border:1px solid #ccc; 
+    font-size:16px; 
+} 
+.career-form button
+{ 
+    background:#2d63e2; 
+    color:white; 
+    padding:12px; 
+    border:none; 
+    border-radius:10px; 
+    cursor:pointer; 
+} 
+textarea{ 
+    resize:none; 
+    height:120px; 
+} 
+.career-form h1{ 
+    text-align:center; 
+}
+
+.career-form button:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+    transition:0.3s;
+}
+
+.career-form input:focus,
+.career-form select:focus,
+.career-form textarea:focus{
+    outline:none;
+    border:2px solid #2d63e2;
+}
+
+textarea{
+    height:150px;
+}
+.career-form label{
+    font-size:16px;
+    font-weight:600;
+    color:#333;
+    margin-bottom:-8px;
+}
