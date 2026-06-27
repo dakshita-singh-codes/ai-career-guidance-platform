@@ -14,11 +14,11 @@ function Hero() {
 
                 <h1>
 
-                    Land Your
+                    Your AI
 
-                    <span> Dream Job </span>
+                    <span> Career </span>
 
-                    with AI
+                    Mentor
 
                 </h1>
 

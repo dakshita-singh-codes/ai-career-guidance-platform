@@ -123,3 +123,62 @@
     color:#475569;
 
 }
+
+.hero{
+    background: linear-gradient(135deg,#f8fbff,#eef5ff);
+}
+
+.hero-right img{
+    width:100%;
+    max-width:500px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+.primary-btn:hover{
+
+background:#1748b5;
+
+transform:translateY(-3px);
+
+transition:.3s;
+
+}
+
+.secondary-btn:hover{
+
+background:#2563eb;
+
+color:white;
+
+transition:.3s;
+
+}
+
+.feature-card{
+
+transition:.3s ease;
+
+}
+
+.feature-card:hover{
+
+transform:translateY(-12px);
+
+}
+
